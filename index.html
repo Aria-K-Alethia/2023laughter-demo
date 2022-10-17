@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+	<title>Audio Samples of the paper "Cross-lingual Speaker Adaptation using Domain Adaptation and Speaker Consistency Loss for Text-To-Speech Synthesis"</title>
+</head>
+<body>
+    <article>
+      <header>
+        <h1>Audio Samples of the paper "Cross-lingual Speaker Adaptation using Domain Adaptation and Speaker Consistency Loss for Text-To-Speech Synthesis"</h1>
+      </header>
+    </article>
+
+    <p><b>Authors</b>: Detai Xin, Yuki Saito, Shinnosuke Takamichi, Tomoki Koriyama, Hiroshi Saruwatari</p>
+
+    <div>
+    	<b>Note:</b>
+    	<span style="background-color: #FFFF00">In order to obtain best quality, we strongly encourage the listeners to take their headphones.</span>
+    </div>
+
+    <p class="toc_title">Contents</p>
+    <div id="toc_container">
+    <ul>
+      <li><a href="https://aria-k-alethia.github.io/2021clsa/#intra_lingual">Intra-lingual TTS synthesis</a></li>
+      <li><a href="https://aria-k-alethia.github.io/2021clsa/#cross_lingual">Cross-lingual TTS synthesis</a></li>
+    </ul>
+    </div>
+
+    <p>&nbsp;</p>
+      <div>
+        We used the combination of VCTK and JVS as training datasets.
+        They included 107 English and 100 Japanese speakers. We used VCTK & JVS to train the speaker encoder and VCTK to train the TTS model.
+        We randomly picked up 8 Japanese and 8 English speakers as unseen speaker. Any data of unseen speakers were excluded from the training dataset. <b>Note that, for TTS model the seen speakers were not seen by the two models without using SCL (Base. and DA).</b>
+	<br><br>
+		All of the utterances below are not included in training data.
+      </div>
+
+      <div>
+      <a name="intra_lingual"><h2>Intra-lingual TTS synthesis</h2></a>
+     
+      <a name="multi_tts.sample"><h3>Seen Speaker</h3></a>
+      <div class="text_gst">Text: We also need a small plastic snake and a big toy frog for the kids.
+</div>
+      <table>
+        <tbody>
+        <tr>
+			<td nowrap=""></td>
+			<td align="center">Ground Truth</td>
+			<td align="center">Base.</td>
+			<td align="center">Base.+SCL</td>
+			<td align="center">DA</td>
+			<td align="center">DA+SCL</td>
+			
+        </tr> 
+        <tr>
+          <td nowrap="">p254<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><audio controls=""><source src="./audio/raw/p254_004.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline/p254_004.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline_consistency_cos/p254_004.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed/p254_004.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed_consistency_cos/p254_004.wav"></audio></td>
+        </tr>
+
+       </tbody>
+      </table>
+      <div class="text_gst">Text: Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+	<tr>
+		<td nowrap="">p302<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td><audio controls=""><source src="./audio/raw/p302_018.wav"></audio></td>
+		<td><audio controls=""><source src="./audio/baseline/p302_018.wav"></audio></td>
+		<td><audio controls=""><source src="./audio/baseline_consistency_cos/p302_018.wav"></audio></td>
+		<td><audio controls=""><source src="./audio/proposed/p302_018.wav"></audio></td>
+		<td><audio controls=""><source src="./audio/proposed_consistency_cos/p302_018.wav"></audio></td>
+	</tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: That could mean the difference between life and death in action.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">p264<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/p264_215.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/p264_215.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/p264_215.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/p264_215.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/p264_215.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: When the sunlight strikes raindrops in the air, they act as a prism and form a rainbow.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">p308<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/p308_006.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/p308_006.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/p308_006.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/p308_006.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/p308_006.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+      <a name="multi_tts.sample"><h3>Unseen Speaker</h3></a>
+      <div class="text_gst">Text: Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+        <tr>
+			<td nowrap=""></td>
+			<td align="center">Ground Truth</td>
+			<td align="center">Base.</td>
+			<td align="center">Base.+SCL</td>
+			<td align="center">DA</td>
+			<td align="center">DA+SCL</td>
+        </tr>
+        <tr>
+          <td nowrap="">p226<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><audio controls=""><source src="./audio/raw/p226_003.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline/p226_003.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline_consistency_cos/p226_003.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed/p226_003.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed_consistency_cos/p226_003.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: So if we can take anything from tonight, it will be fantastic.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">p245<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/p245_035.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/p245_035.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/p245_035.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/p245_035.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/p245_035.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: Of course, on Tuesday, United were beaten despite this.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">p265<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/p265_036.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/p265_036.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/p265_036.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/p265_036.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/p265_036.wav"></audio></td>
+          </tr>></td>
+        </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: I want to give everything to Rangers while I am with the club.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">p280<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/p280_033.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/p280_033.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/p280_033.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/p280_033.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/p280_033.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+
+      <a name="cross_lingual"><h2>Cross-lingual TTS synthesis</h2></a>
+      <a name="multi_tts.sample"><h3>Japanese speaker, English speech</h3></a>
+      <a name="multi_tts.sample"><h3>Seen Speaker</h3></a>
+      <div class="text_gst">Text: However, the decision has been welcomed by Scottish Enterprise officials.</div>
+      <table>
+        <tbody>
+        <tr>
+			<td nowrap=""></td>
+			<td align="center">Reference</td>
+			<td align="center">Base.</td>
+			<td align="center">Base.+SCL</td>
+			<td align="center">DA</td>
+			<td align="center">DA+SCL</td>
+        </tr> 
+        <tr>
+          <td nowrap="">jvs003<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><audio controls=""><source src="./audio/raw/jvs003_10.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline/jvs003_10.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs003_10.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed/jvs003_10.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs003_10.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: That company should not be allowed to operate in this country.</div>
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">jvs045<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/jvs045_17.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/jvs045_17.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs045_17.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/jvs045_17.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs045_17.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+	  <div class="text_gst">Text: Many complicated ideas about the rainbow have been formed.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">jvs038<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/jvs038_10.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/jvs038_10.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs038_10.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/jvs038_10.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs038_10.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: Now the life of this orchestra is very difficult.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">jvs082<br>(seen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/jvs082_9.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/jvs082_9.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs082_9.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/jvs082_9.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs082_9.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+      <a name="multi_tts.sample"><h3>Unseen Speaker</h3></a>
+      <div class="text_gst">Text: But the disease has not been confined to the Tory Party.</div>
+      <table>
+        <tbody>
+        <tr>
+			<td nowrap=""></td>
+			<td align="center">Reference</td>
+			<td align="center">Base.</td>
+			<td align="center">Base.+SCL</td>
+			<td align="center">DA</td>
+			<td align="center">DA+SCL</td>
+        </tr> 
+        <tr>
+          <td nowrap="">jvs001<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><audio controls=""><source src="./audio/raw/jvs001_14.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline/jvs001_14.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs001_14.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed/jvs001_14.wav"></audio></td>
+          <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs001_14.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: Jim Wallace, the justice minister, acknowledged that prisoner numbers were a concern.</div>
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">jvs071<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/jvs071_2.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/jvs071_2.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs071_2.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/jvs071_2.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs071_2.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+	  <div class="text_gst">Text: The First Minister is scheduled to be elected by the Parliament tomorrow.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">jvs036<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/jvs036_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/jvs036_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs036_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/jvs036_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs036_4.wav"></audio></td>
+          </tr>
+        </tr>
+       </tbody>
+      </table>
+      <div class="text_gst">Text: The task force continues to be in discussion with both companies.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap="">jvs084<br>(unseen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><audio controls=""><source src="./audio/raw/jvs084_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline/jvs084_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/baseline_consistency_cos/jvs084_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed/jvs084_4.wav"></audio></td>
+            <td><audio controls=""><source src="./audio/proposed_consistency_cos/jvs084_4.wav"></audio></td>
+          </tr>
+       </tbody>
+      </table>
+ </body>
+ </html>
