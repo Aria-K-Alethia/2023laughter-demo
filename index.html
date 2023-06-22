@@ -5,27 +5,27 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-	<title>Audio Samples of the paper "Improving Speech Prosody of Audiobook Text-to-Speech Synthesis with Acoustic and Textual Contexts"</title>
+	<title>Audio Samples of the paper "Laughter Synthesis using Pseudo Phonetic Tokens with a Large-scale In-the-wild Laughter Corpus"</title>
 </head>
 <body>
     <article>
       <header>
-        <h1>Audio Samples of the paper "Improving Speech Prosody of Audiobook Text-to-Speech Synthesis with Acoustic and Textual Contexts"</h1>
+        <h1>Audio Samples of the paper "Laughter Synthesis using Pseudo Phonetic Tokens with a Large-scale In-the-wild Laughter Corpus"</h1>
       </header>
     </article>
 
-    <p><b>Authors</b>: Detai Xin, Sharath Adavanne, Federico Ang, Ashish Kulkarni, Shinnosuke Takamichi, Hiroshi Saruwatari</p>
-
+    <p><b>Authors</b>: Detai Xin, Shinnosuke Takamichi, Ai Morimatsu, Hiroshi Saruwatari</p>
+    <p>The University of Tokyo, Tokyo, Japan</p>
+    <p>Accetped by <i>INTERSPEECH 2023</i></p>
     <div>
-    	<b>Note:</b>
-    	<span style="background-color: #FFFF00">In order to obtain best quality, we strongly encourage the listeners to take their headphones.</span>
+      <a href="https://arxiv.org/abs/2305.12442">[Paper]</a> <a href="https://sites.google.com/site/shinnosuketakamichi/research-topics/laughter_corpus">[Corpus]</a> <a href="https://github.com/Aria-K-Alethia/laughter-synthesis">[Code]</a>
     </div>
 
     <p class="toc_title">Contents</p>
     <div id="toc_container">
     <ul>
-      <li><a href="https://aria-k-alethia.github.io/2023rat-demo/#audiobook">Audiobook TTS</a></li>
-      <li><a href="https://aria-k-alethia.github.io/2022rat-demo//#prosody">Context-dependent prosody prediction</a></li>
+      <li><a href="https://aria-k-alethia.github.io/2023rat-demo/#laughter-synthesis">Laughter synthesis</a></li>
+      <li><a href="https://aria-k-alethia.github.io/2022rat-demo/#laughter-generation">Unconditional laughter generation</a></li>
     </ul>
     </div>
 
@@ -33,67 +33,121 @@
       <div>
         <b>Abstract:</b> 
 	<br><br>
-		All of the utterances below are not included in the training set.
+		We present a large-scale in-the-wild Japanese laughter corpus and a laughter synthesis method.
+Previous work on laughter synthesis lacks not only data but also proper ways to represent laughter.
+To solve these problems, we first propose an in-the-wild corpus comprising 3.5 hours of laughter, which is to our best knowledge the largest laughter corpus designed for laughter synthesis.
+We then propose pseudo phonetic tokens (PPTs) to represent laughter by a sequence of discrete tokens, which are obtained by training a clustering model on features extracted from laughter by a pretrained self-supervised model.
+Laughter can then be synthesized by feeding PPTs into a text-to-speech system.
+We further show PPTs can be used to train a language model for unconditional laughter generation.
+Results of comprehensive subjective and objective evaluations demonstrate that the proposed method significantly outperforms a baseline method, and can generate natural laughter unconditionally.
       </div>
-
+    <p>You can find more samples at <a href="https://drive.google.com/drive/folders/1uIEFvgtDfLQN-R4XjwL7Ivr2aDBTtJ92?usp=sharing">here</a></p>
       <div>
-      <a name="audiobook"><h2>Audiobook TTS</h2></a>
-      <div><p>The following audiobook is ごんぎつね of a male speaker synthesized by the ATCE-suc. model.</p>
-        <audio controls=""><source src="./wavs/ごんぎつね_1.wav"></audio>
+      <a name="laughter-synthesis"><h2>Laughter synthesis</h2></a>
+      <div><p>Samples in this section were synthesized from existing PPTs(discrete codes)/phonemes of the test set, but were not used during training</p>
+        <table>
+          <tbody>
+          <tr>
+        <td align="center">Ground Truth</td>
+        <td align="center">HiFi-GAN</td>
+        <td align="center">L5</td>
+        <td align="center">L8</td>
+        <td align="center">L12</td>
+        <td align="center">baseline</td>
+        
+          </tr> 
+          <tr>
+            <td><audio controls=""><source src="wavs/gt/test/1GY7NRSzcSI-85.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/hifigan/test/1GY7NRSzcSI-85.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l5/test/1GY7NRSzcSI-85.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l8/test/1GY7NRSzcSI-85.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l12/test/1GY7NRSzcSI-85.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/baseline/test/1GY7NRSzcSI-85.wav"></audio></td>
+            
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="wavs/gt/test/2jvrc_9BW9g-06.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/hifigan/test/2jvrc_9BW9g-06.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l5/test/2jvrc_9BW9g-06.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l8/test/2jvrc_9BW9g-06.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l12/test/2jvrc_9BW9g-06.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/baseline/test/2jvrc_9BW9g-06.wav"></audio></td>
+            
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="wavs/gt/test/3ck5pph9eOE-23.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/hifigan/test/3ck5pph9eOE-23.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l5/test/3ck5pph9eOE-23.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l8/test/3ck5pph9eOE-23.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l12/test/3ck5pph9eOE-23.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/baseline/test/3ck5pph9eOE-23.wav"></audio></td>
+            
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="wavs/gt/test/9PgOPvfwBHE-19.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/hifigan/test/9PgOPvfwBHE-19.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l5/test/9PgOPvfwBHE-19.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l8/test/9PgOPvfwBHE-19.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l12/test/9PgOPvfwBHE-19.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/baseline/test/9PgOPvfwBHE-19.wav"></audio></td>
+            
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="wavs/gt/test/AJth9mgZyxw-12.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/hifigan/test/AJth9mgZyxw-12.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l5/test/AJth9mgZyxw-12.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l8/test/AJth9mgZyxw-12.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/l12/test/AJth9mgZyxw-12.wav"></audio></td>
+            <td><audio controls=""><source src="wavs/baseline/test/AJth9mgZyxw-12.wav"></audio></td>
+          </tr>
+         </tbody>
+        </table>
       </div>
-      <div>Since the audiobooks are very large please find the rest of them in <a href="https://drive.google.com/drive/folders/1LUb8T6NZjLpdGqyFWebohjs4dTsgm-Oj?usp=sharing" target="_blank">this link</a> </div>
+  
+      <a name="laughter-generation"><h2>Unconditional laughter generation</h2></a>
       <div>
-        <p>The link above contains the following audiobooks. These are all famous books so you can find the texts of them by google.</p>
-        <ul>
-          <li>ごんぎつね Female speaker</li>
-          <li>ごんぎつね Male speaker</li>
-          <li>手袋を買いに Female spekaer</li>
-          <li>桜桃 Female speaker</li>
-          <li>蜘蛛の糸 Female speaker</li>
-          <li>蜘蛛の糸 Male speaker</li>
-          </ul>
-      </div>
-      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
-      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
-
-      <a name="prosody"><h2>Context-dependent prosody prediction</h2></a>
-      <p>All the following audios are synthesized using the same text with different contexts.</p>
-	  <p>You can get more samples with different contexts at <a href="https://drive.google.com/drive/folders/12fNIoxbkws2Mzu6r651u-qd6LdJvHs_S?usp=sharing" target="_blank">this link</a> </p>
-      <div class="text_gst">Text:「おれと同じ一人ぼっちの兵十か」</div>
+      <p>To synthesize non-existing laughter, we trained a language model on PPTs and sample laughter PPTs unconditionally.</p>
+      <p><b> The Ground Truth samples in this section are only used for reference, their content is, and should be, different from the synthesized one.</b></p>
       <table>
         <tbody>
         <tr>
-			<td nowrap=""></td>
+      <td align="center">Ground Truth</td>
+      <td align="center">L5</td>
+      <td align="center">L8</td>
+      <td align="center">L12</td>
         </tr> 
         <tr>
-          <td nowrap="">Ground Truth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td><audio controls=""><source src="./wavs/atce_both_prosody/prosody_gt.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/gt/tlm/1GY7NRSzcSI-34.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l5/tlm/1GY7NRSzcSI-34.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l8/tlm/1GY7NRSzcSI-34.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l12/tlm/1GY7NRSzcSI-34.wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls=""><source src="wavs/gt/tlm/2jvrc_9BW9g-10.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l5/tlm/2jvrc_9BW9g-10.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l8/tlm/2jvrc_9BW9g-10.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l12/tlm/2jvrc_9BW9g-10.wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls=""><source src="wavs/gt/tlm/3ck5pph9eOE-23.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l5/tlm/3ck5pph9eOE-23.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l8/tlm/3ck5pph9eOE-23.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l12/tlm/3ck5pph9eOE-23.wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls=""><source src="wavs/gt/tlm/9PgOPvfwBHE-50.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l5/tlm/9PgOPvfwBHE-50.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l8/tlm/9PgOPvfwBHE-50.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l12/tlm/9PgOPvfwBHE-50.wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls=""><source src="wavs/gt/tlm/a8w2d5cogmA-79.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l5/tlm/a8w2d5cogmA-79.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l8/tlm/a8w2d5cogmA-79.wav"></audio></td>
+          <td><audio controls=""><source src="wavs/l12/tlm/a8w2d5cogmA-79.wav"></audio></td>
         </tr>
        </tbody>
       </table>
-      <table>
-        <tbody>
-          <tr>
-            <td nowrap="">Synthesized 1<br>(Correct context)&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td><audio controls=""><source src="./wavs/atce_both_prosody/prosody_0.wav"></audio></td>
-          </tr>
-       </tbody>
-      </table>
-      <table>
-        <tbody>
-          <tr>
-            <td nowrap="">Synthesized 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(Low tension)&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td><audio controls=""><source src="./wavs/atce_both_prosody/prosody_5.wav"></audio></td>
-          </tr>
-       </tbody>
-      </table>
-      <table>
-        <tbody>
-          <tr>
-            <td nowrap="">Synthesized 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(High tension)&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td><audio controls=""><source src="./wavs/atce_both_prosody/prosody_10.wav"></audio></td>
-          </tr>
-       </tbody>
-      </table>
+    </div>
  </body>
  </html>
